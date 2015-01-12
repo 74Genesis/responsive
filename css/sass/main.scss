@@ -33,14 +33,14 @@ $back2: #f4f4f4;
 /* -------- Сброс настроек -------- */
 @import "compass/reset";
 a {
-	color: $base-color;
+	color: $font-color-dark;
 	text-decoration: none;
 	@include transition-property(color, border-bottom-color);
 	@include transition-duration(0.2s, 0.2s);
 	@include transition-timing-function(ease-in-out, ease-in-out);
 	@include transition-delay(initial, initial);
 	&:hover {
-		color: $font-color-base;
+		color: $base-color;
 	}
 }
 
@@ -364,13 +364,93 @@ nav.nav-top .menu {
 	margin-top: 15px;
 }
 
-/* ****************** About us ****************** */
+/* ****************** Portfolio ****************** */
 .line_portfolio {
-	padding-top: 56px !important
+	padding-top: 56px !important;
 	background: $back2;
 }
 
+.port-items {
+	width: 102.56410256410256%
+}
 
+.port-item {
+	float: left;
+	width: 30.83333333333333%;
+	margin-right: 2.5%;
+	@include inline-block;
+	margin-bottom: 40px;
+}
+
+// картинка
+.port-item__img {
+	position: relative;
+	width: 100%;
+	height: auto;
+	img {
+		display: block;
+		position: relative;
+		width: 100%;
+	}
+	&:after {
+		content: "";
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: $base-color2;
+		width: 100%;
+		height: 100%;
+		opacity: 0.5;
+		z-index: 10;
+	}
+	// кнопка read more
+	.port-item__more {
+		top: 50%; left: 50%; 
+		width: 107px;
+		height: 20px;
+		margin: -25px 0 0 -83.5px;
+		position: absolute !important;
+		z-index: 20;
+		display: none;
+	}
+	&:hover {cursor: pointer;}
+	&:hover .port-item__more, &:hover:after {
+		display: block !important;
+	}
+
+}
+
+.port-item__info {
+	border: 1px solid #e8e8e8;
+	border-top: none;
+	height: 60px;
+	vertical-align: middle;
+	@include box-sizing(border-box);
+	padding: 0 10px;
+	background: white;
+	white-space: nowrap;
+	word-wrap: normal;
+	// @include border-bottom-radius(6px);
+	// //border для IE. Ссылка относительно html файла
+	// behavior: url(pie/PIE.htc);
+	.post-item__title {
+		float: left;
+		width: 70%;
+		overflow: hidden;
+	}
+	.post-item__cat {
+		float: right;
+		width: 29%;
+		overflow: hidden;
+		text-align: right;
+		font-style: italic;
+		color: $font-color-base;
+	}
+	a {
+		line-height: 4.2em;
+	}
+}
 
 /* ****************** ЭЛЕМЕНТЫ ****************** */
 // основа секций
@@ -407,6 +487,30 @@ nav.nav-top .menu {
 	&:hover {
 		color: $base-color;
 		background: #fff;
+	}
+}
+
+.base-but-border {
+	@include transition-property(background-color, color);
+	@include transition-duration(0.2s, 0.2s);
+	@include transition-timing-function(ease-in-out, ease-in-out);
+	@include transition-delay(initial, initial);
+	@include adjust-font-size-to(20px);
+	line-height: 1em;
+	font-weight: 700;
+	color: #fff;
+	@include border-radius(2px);
+	// для IE. Ссылка относительно html файла
+	behavior: url(pie/PIE.htc);
+	padding: 15px 30px;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	@include inline-block;
+	border: 1px solid white;
+	&:hover {
+		background: white;
+		color: $base-color2;
 	}
 }
 
