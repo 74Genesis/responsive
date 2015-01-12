@@ -1,0 +1,456 @@
+// Импорты
+// @import "mix.scss";
+@import "compass/css3";
+@import "compass/typography/vertical_rhythm";
+@import "compass/utilities";
+
+
+/* -------- Переменные -------- */
+$base-color: #39c9da;
+$base-color2: #4b4a4b;
+
+$font-color-base: #a8a8a8;
+$font-color-dark: #504f50;
+$font-color-light: #504f50;
+$font-color-white: #fff;
+
+
+// фон в выпадающем меню
+// $menu-back-color: #e89980;
+$menu-back-color: #27CFC3;
+// ширина контента
+$width-con-1: 1170px;
+$width-con-2: 1040px;
+$width-con-3: 880px;
+$width-con-4: 90%;
+
+
+// фоны
+$back1: #fafafa;
+$back2: #f4f4f4;
+
+
+/* -------- Сброс настроек -------- */
+@import "compass/reset";
+a {
+	color: $base-color;
+	text-decoration: none;
+	@include transition-property(color, border-bottom-color);
+	@include transition-duration(0.2s, 0.2s);
+	@include transition-timing-function(ease-in-out, ease-in-out);
+	@include transition-delay(initial, initial);
+	&:hover {
+		color: $font-color-base;
+	}
+}
+
+
+// ширина страницы
+// $width-scr-1: 1280px;
+// $width-scr-2: 1040px;
+// $width-scr-3: 880px;
+// $width-scr-4: 90%;
+
+/* -------- Шрифт -------- */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700);
+
+
+// Базовые настройки
+$base-font-size: 14px;
+html, body {
+	font-family:'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	color: $font-color-base;
+
+	background: $back1;
+	// height: 100%;
+}
+
+h1 {
+	@include adjust-font-size-to(20px, $from-size: $base-font-size);
+	text-transform: uppercase;
+	font-weight: 700;
+	color: $font-color-dark;
+}
+
+h2 {
+	@include adjust-font-size-to(14px, $from-size: $base-font-size);
+	font-weight: 700;
+	text-transform: uppercase;
+	color: $font-color-dark;
+}
+
+p {
+	@include adjust-font-size-to(14px, $from-size: $base-font-size);
+	line-height: 1.4em;
+	margin-bottom: 22px;
+}
+
+p.top {
+	@include adjust-font-size-to(22px, $from-size: $base-font-size);
+	line-height: 1.3em;
+	// font-weight: 400;
+}
+
+
+/* ****************** ШАПКА ****************** */
+header {
+	position: absolute;
+	width: 100%;
+	height: 96px;
+	// @include clearfix;
+	z-index: 200;
+	top: 0;
+	left: 0;
+	@include animation(none);
+	-ms-animation: none;
+	-o-animation: none;
+}
+
+.header_scroll {
+	top: 0;
+	left: 0;
+	margin-top: 0px;
+	position: fixed;
+	background: #444;
+	@include animation(movement 0.5s);
+	-ms-animation: movement 0.5s;
+	-o-animation: movement 0.5s;
+}
+
+@-webkit-keyframes 'movement' {
+	0% {margin-top: -70px;}
+   100% {margin-top: 0;}
+}
+@-moz-keyframes 'movement' {
+	0% {margin-top: -70px;}
+   100% {margin-top: 0;}
+}
+@-ms-keyframes 'movement' {
+	0% {margin-top: -70px;}
+   100% {margin-top: 0;}
+}
+@-o-keyframes 'movement' {
+	0% {margin-top: -70px;}
+   100% {margin-top: 0;}
+}
+@keyframes 'movement' {
+	0% {margin-top: -70px;}
+   100% {margin-top: 0;}
+}
+
+.header__logo {
+	@include adjust-font-size-to(33px);
+	padding: 25px;
+	margin-left: 56px;
+	overflow: hidden;
+	font-size: 2em;
+	color: $base-color;
+	float: left;
+	font-weight: 700;
+}
+
+
+// меню 
+nav {
+	float: right;
+	height: inherit;
+}
+
+nav.nav-top .menu {
+	height: inherit;
+	position: relative;
+	margin-right: 57px;
+
+	& > .menu-top__item {
+		@include inline-block;
+		position: relative;
+		
+		& > a {
+			color: #fff;
+			text-transform: uppercase;
+			@include adjust-font-size-to(15px); /* @adjust-font-size-to() - подсчитывает размер шрифта относительно базового */
+			font-weight: 700;
+			padding: 7px 20px;
+			line-height: 6.4em;
+			// border: 1px solid black;
+			// margin: 0 10px;
+			@include border-radius(6px);
+			@include transition-property(background-color, color);
+			@include transition-duration(0.2s, 0.2s);
+			@include transition-timing-function(ease-in-out, ease-in-out);
+			@include transition-delay(initial, initial);
+			// для IE. Ссылка относительно html файла
+			behavior: url(pie/PIE.htc);
+		} 
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&:hover > a {
+			background-color: rgba(153, 153, 153, 0.25);
+		}
+
+		&:hover > ul {
+			display: block;
+		}
+
+		// Второй уровень
+		ul {
+			display: none;
+			position: absolute;
+			background: #fff;
+			top:70px;
+			right: 0px;
+			z-index: 1000;
+			margin-top: 19px;
+			padding: 10px 0;
+			width: 210px;
+			@include box-shadow(0 2px 0 0 rgba(0, 0, 0, 0.065), inset 0 -1px 0 0 #fff, inset 0 0 0 1px rgba(229, 229, 229, 0.5));
+			@include border-radius(6px);
+			// для IE. Ссылка относительно html файла
+			behavior: url(pie/PIE.htc);
+			
+			// уголок
+			&:before {
+				transform: rotate(45deg);
+				background: #fff;
+				border:1px solid  rgba(229, 229, 229, 0.5);
+				border-bottom: 0;
+				border-right: 0;
+				// для IE. Ссылка относительно html файла
+				behavior: url(pie/PIE.htc);
+				@include box-shadow(-0.25em -0.125em 0.125em 0 rgba(0, 0, 0, 0.015));
+				content: '';
+				display: block;
+				height: 13px;
+				position: absolute;
+				right: 24px;
+				top: -7px;
+				width: 13px;
+				z-index: 0;
+			}
+			// заполняет пробел между меню
+			&:after {
+				display: block;
+				position: absolute;
+				content: '';
+				width: 100%;
+				height: 20px;
+				top: -20px;
+				left: 0;
+				// background: #fff;
+			}
+
+			li {position: relative;}
+
+			li a{
+				border-top: 1px solid #f2f2f2;
+				padding: 10px 19px;
+				color:inherit;
+				display: block;
+				@include adjust-font-size-to(18px);
+			}
+
+			li:first-child a {
+				border: none;
+			}
+
+			li:hover > a {
+				background: $menu-back-color;
+				color: #fff;
+			}
+
+			// 3-й и остальные уровни
+			li:hover > ul {display: block;}
+			li ul {
+				display: none;
+				position: absolute;
+				left: -210px;
+				top: -10px;
+				margin: 0;
+				&:before {display: none}
+			}
+		}
+	}
+	
+	// галочка выпадающего меню
+	.menu-top__item_dropdown i {
+		@include adjust-font-size-to(14px);
+		color: rgba(255, 255, 255, 0.75);
+		margin-right: 10px;
+	}
+}
+
+
+/* ****************** Верх ****************** */
+
+.line_top {
+	width: 100%;
+	// height: 532px;
+	background-image: url('../../img/header.jpg') !important;
+
+	background-attachment: fixed;
+	background-color: #666;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	// filter: brightness(70%);
+	// -webkit-filter: brightness(70%);
+	// -moz-filter: brightness(70%);
+	// -o-filter: brightness(70%);
+	// -ms-filter: brightness(70%);
+
+	color: white;
+	position: relative;
+	@include box-sizing(border-box);
+	text-align: center;
+	padding: 255px 0 100px 0 !important;
+}
+
+.header-title {
+	text-transform: uppercase;
+	@include adjust-font-size-to(33px);
+	line-height: 1.355em;
+
+	font-weight: 700;
+	width: 530px;
+	margin: 0 auto 32px;
+}
+
+
+/* ****************** About us ****************** */
+.line_about {
+	padding: 57px 0 50px !important;
+}
+
+.about-img {
+	display: block;
+	position: absolute;
+	width: 48.80341%;
+	bottom: 0;
+	left: 0;
+
+	img {
+		position: relative;
+		display: block;
+	}
+}
+
+// правая колонка с описанием
+.about-descr {
+	width: 48.6%;
+	float: right;
+}
+.about-descr__title {
+	padding-bottom: 17px;
+	margin-bottom:25px;
+	position: relative;
+	&:after {
+		content: '';
+		height: 2px;
+		width: 100px;
+		position: absolute;
+		display: block;
+		bottom: 0;
+		left: 0;
+		background: $base-color;
+	}
+}
+
+.about-descr__text .base-but {
+	margin-top: 15px;
+}
+
+/* ****************** About us ****************** */
+.line_portfolio {
+	padding-top: 56px !important
+	background: $back2;
+}
+
+
+
+/* ****************** ЭЛЕМЕНТЫ ****************** */
+// основа секций
+.line {
+	width: 100%;
+	padding: 60px 0 50px 0;
+	border-bottom: 1px solid #e8e8e8;
+	.line__con {
+		position: relative;
+	}
+}
+
+
+// базовые настройки кнопки
+.base-but {
+	@include transition-property(background-color, color);
+	@include transition-duration(0.2s, 0.2s);
+	@include transition-timing-function(ease-in-out, ease-in-out);
+	@include transition-delay(initial, initial);
+	@include adjust-font-size-to(20px);
+	line-height: 1em;
+	font-weight: 700;
+	background: $base-color;
+	color: #fff;
+	@include border-radius(6px);
+	// для IE. Ссылка относительно html файла
+	behavior: url(pie/PIE.htc);
+	padding: 18px 40px;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	text-transform: uppercase;
+	@include inline-block;
+	&:hover {
+		color: $base-color;
+		background: #fff;
+	}
+}
+
+// ширина контента
+.base_con_width {
+	width: $width-con-1;
+	margin: auto;
+	@include clearfix;
+}
+
+
+// заголовок и описание секций
+.line__title {
+	margin-bottom: 14px;
+	text-align: center;
+}
+.line__descr {
+	text-align: center;
+	line-height: 1.5em;
+	margin-bottom: 35px;
+	span {
+		width: 520px;
+		display: block;
+		margin: auto;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 900px) {
+	.test {
+		background: black;
+		width: 200px;
+	}
+}
+@media screen and (max-width: 800px) {
+	.test {
+		background: yellow;
+	}
+}

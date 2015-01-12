@@ -1,0 +1,56 @@
+/*
+Error: Invalid CSS after "	background": expected ";", was ": $back2;"
+        on line 370 of F:/OpenServer3/domains/other/pf/css/sass/main.scss
+
+365: }
+366: 
+367: /* ****************** About us ****************** *\/
+368: .line_portfolio {
+369: 	padding-top: 56px !important
+370: 	background: $back2;
+371: }
+372: 
+373: 
+374: 
+375: /* ****************** ╨н╨Ы╨Х╨Ь╨Х╨Э╨в╨л ****************** *\/
+
+Backtrace:
+F:/OpenServer3/domains/other/pf/css/sass/main.scss:370
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:1165:in `expected'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:1101:in `expected'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:1096:in `tok!'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:761:in `block in try_declaration'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:1141:in `call'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:1141:in `rethrow'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:766:in `try_declaration'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:696:in `declaration_or_ruleset'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:661:in `block_child'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:650:in `block_contents'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:642:in `block'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:635:in `ruleset'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:660:in `block_child'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:653:in `block_contents'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:117:in `stylesheet'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:42:in `parse'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/engine.rb:393:in `_to_tree'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/engine.rb:268:in `render'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:209:in `each'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:328:in `block in watch'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/listener.rb:252:in `call'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"	background\": expected \";\", was \": $back2;\"\A         on line 370 of F:/OpenServer3/domains/other/pf/css/sass/main.scss\A \A 365: }\A 366: \A 367: /* ****************** About us ****************** */\A 368: .line_portfolio {\A 369: 	padding-top: 56px !important\A 370: 	background: $back2;\A 371: }\A 372: \A 373: \A 374: \A 375: /* ****************** ╨н╨Ы╨Х╨Ь╨Х╨Э╨в╨л ****************** */"; }
