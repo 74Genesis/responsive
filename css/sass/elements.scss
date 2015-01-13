@@ -1,0 +1,79 @@
+/* ****************** отдельные элементы ****************** */
+// основа секций
+.line {
+	width: 100%;
+	padding: 60px 0 50px 0;
+	border-bottom: 1px solid #e8e8e8;
+	.line__con {
+		position: relative;
+	}
+}
+
+
+// базовые настройки кнопки
+.base-but {
+	@include transition-property(background-color, color);
+	@include transition-duration(0.2s, 0.2s);
+	@include transition-timing-function(ease-in-out, ease-in-out);
+	@include transition-delay(initial, initial);
+	@include adjust-font-size-to(20px);
+	line-height: 1em;
+	font-weight: 700;
+	background-color: $base-color;
+	 -pie-background:$base-color;
+	color: #fff;
+	@include border-radius(6px);
+	// для IE. Ссылка относительно html файла
+	// behavior: url(pie/PIE.htc);
+	padding: 18px 40px;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	text-transform: uppercase;
+	@include inline-block;
+	&:hover {
+		color: $base-color;
+		background: #fff;
+	}
+}
+
+.base-but-border {
+	@extend .base-but;
+	color: #fff;
+	@include border-radius(2px);
+	padding: 15px 30px;
+	border: 1px solid white;
+	background: none;
+	text-transform: none;
+	&:hover {
+		background: white;
+		color: $base-color2;
+	}
+}
+
+// ширина контента
+.base_con_width {
+	width: $width-con-1;
+	margin: auto;
+	@include clearfix;
+}
+
+
+// заголовок и описание секций
+.line__title {
+	margin-bottom: 14px;
+	text-align: center;
+}
+.line__descr {
+	text-align: center;
+	line-height: 1.5em;
+	margin-bottom: 35px;
+	overflow: hidden;
+	span {
+		width: 520px;
+		display: block;
+		margin: auto;
+	}
+}
+
+

@@ -1,0 +1,76 @@
+/*
+Error: Undefined mixin 'transition-property'.
+        on line 15 of F:/OpenServer3/domains/other/pf/css/sass/elements.scss, in `transition-property'
+        from line 15 of F:/OpenServer3/domains/other/pf/css/sass/elements.scss
+
+10: }
+11: 
+12: 
+13: // ╨▒╨░╨╖╨╛╨▓╤Л╨╡ ╨╜╨░╤Б╤В╤А╨╛╨╣╨║╨╕ ╨║╨╜╨╛╨┐╨║╨╕
+14: .base-but {
+15: 	@include transition-property(background-color, color);
+16: 	@include transition-duration(0.2s, 0.2s);
+17: 	@include transition-timing-function(ease-in-out, ease-in-out);
+18: 	@include transition-delay(initial, initial);
+19: 	@include adjust-font-size-to(20px);
+20: 	line-height: 1em;
+
+Backtrace:
+F:/OpenServer3/domains/other/pf/css/sass/elements.scss:15:in `transition-property'
+F:/OpenServer3/domains/other/pf/css/sass/elements.scss:15
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:338:in `block in visit_mixin'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:98:in `block in with_mixin'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:98:in `with_mixin'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:336:in `visit_mixin'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `map'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `map'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:157:in `visit'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:8:in `visit'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/root_node.rb:36:in `css_tree'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/root_node.rb:20:in `render'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/engine.rb:268:in `render'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:209:in `each'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:328:in `block in watch'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/listener.rb:252:in `call'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'transition-property'.\A         on line 15 of F:/OpenServer3/domains/other/pf/css/sass/elements.scss, in `transition-property'\A         from line 15 of F:/OpenServer3/domains/other/pf/css/sass/elements.scss\A \A 10: }\A 11: \A 12: \A 13: // ╨▒╨░╨╖╨╛╨▓╤Л╨╡ ╨╜╨░╤Б╤В╤А╨╛╨╣╨║╨╕ ╨║╨╜╨╛╨┐╨║╨╕\A 14: .base-but {\A 15: 	@include transition-property(background-color, color);\A 16: 	@include transition-duration(0.2s, 0.2s);\A 17: 	@include transition-timing-function(ease-in-out, ease-in-out);\A 18: 	@include transition-delay(initial, initial);\A 19: 	@include adjust-font-size-to(20px);\A 20: 	line-height: 1em;"; }
