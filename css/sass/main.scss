@@ -15,10 +15,6 @@ $font-color-dark: #504f50;
 $font-color-light: #504f50;
 $font-color-white: #fff;
 
-
-// фон в выпадающем меню
-// $menu-back-color: #e89980;
-$menu-back-color: #27CFC3;
 // ширина контента
 $width-con-1: 1170px;
 $width-con-2: 1040px;
@@ -119,6 +115,7 @@ header {
 	-o-animation: none;
 }
 
+// выпадающее меню
 .header_scroll {
 	top: 0;
 	left: 0;
@@ -128,6 +125,21 @@ header {
 	@include animation(movement 0.5s);
 	-ms-animation: movement 0.5s;
 	-o-animation: movement 0.5s;
+	height: 66px !important;
+	nav.nav-top .menu > .menu-top__item {
+		// высота уменьшена
+		& > a {
+		line-height: 4.4em !important;
+		}
+		// выпадающее меню подвинуть выше
+		& > ul {
+			top: 85px !important;
+		}
+	}
+	// уменьшить отступы логотипа
+	.header__logo {
+		padding: 13px;
+	}
 }
 
 @-webkit-keyframes 'movement' {
@@ -213,12 +225,10 @@ nav.nav-top .menu {
 			display: none;
 			position: absolute;
 			background: #fff;
-			top:70px;
+			top: 90px;
 			right: 0px;
 			z-index: 1000;
-			font-weight: 700;
 			text-transform: uppercase;
-			margin-top: 19px;
 			padding: 10px 0;
 			width: 210px;
 			@include box-shadow(0 2px 0 0 rgba(0, 0, 0, 0.065), inset 0 -1px 0 0 #fff, inset 0 0 0 1px rgba(229, 229, 229, 0.5));
@@ -258,13 +268,15 @@ nav.nav-top .menu {
 			}
 
 			li {position: relative;}
-
+			
+			// все пункты меню ниже 2-го уровня
 			li a{
 				border-top: 1px solid #f2f2f2;
 				padding: 10px 19px;
 				color:inherit;
 				display: block;
-				@include adjust-font-size-to(18px);
+				@include adjust-font-size-to(15px);
+				font-weight: 700;
 			}
 
 			li:first-child a {
@@ -272,7 +284,7 @@ nav.nav-top .menu {
 			}
 
 			li:hover > a {
-				background: $menu-back-color;
+				background: $base-color;
 				color: #fff;
 			}
 
