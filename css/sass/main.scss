@@ -96,6 +96,10 @@ a {
 	}
 }
 
+b {
+	font-weight: 700;
+	color: $font-color-dark;
+}
 
 /******  Импорты  ******/
 // отдельные элементы
@@ -177,7 +181,7 @@ nav.nav-top .menu {
 		& > a {
 			color: #fff;
 			text-transform: uppercase;
-			@include adjust-font-size-to(15px); /* @adjust-font-size-to() - подсчитывает размер шрифта относительно базового */
+			@include adjust-font-size-to(15px); 
 			font-weight: 700;
 			padding: 7px 20px;
 			line-height: 6.4em;
@@ -212,6 +216,8 @@ nav.nav-top .menu {
 			top:70px;
 			right: 0px;
 			z-index: 1000;
+			font-weight: 700;
+			text-transform: uppercase;
 			margin-top: 19px;
 			padding: 10px 0;
 			width: 210px;
@@ -323,7 +329,6 @@ nav.nav-top .menu {
 	text-transform: uppercase;
 	@include adjust-font-size-to(33px);
 	line-height: 1.355em;
-
 	font-weight: 700;
 	width: 530px;
 	margin: 0 auto 32px;
@@ -548,6 +553,69 @@ nav.nav-top .menu {
 		color: $base-color2;
 	}
 }
+
+
+/* ****************** contact us ****************** */
+.line_contact {
+	background: #f4f4f4;
+	padding-top: 54px;
+	.line__descr {
+		margin-bottom: 51px;
+	}
+} 
+
+// описание
+.contact-content {
+	float: left;
+	width: 48.8034%;
+}
+
+// форма
+.contact-form {
+	float: right;
+	width: 48.547%;
+	
+	// поля
+	.name, .mail {
+		width: 47.5352%;
+	}
+	.name {
+		float: left;
+	}
+	.mail {
+		float: right;
+	}
+	.subject, textarea {
+		width: 100%;
+	}
+	textarea {
+		min-height: 150px;
+		max-height: 200px;
+	}
+	.sub {
+		float: right;
+	}
+
+	// отступы полей
+	input[type="text"], textarea {
+		margin: 5px 0 23px;
+	}
+
+}
+
+
+/* ****************** footer ****************** */
+
+footer {
+	background: $base-color;
+	height: 50px;
+	text-align: center;
+	color: $font-color-white;
+	padding: 17px;
+	@include box-sizing(border-box);
+}
+
+
 
 
 

@@ -76,4 +76,35 @@
 	}
 }
 
+// для заголовка с чертой
+.title-underline {
+	padding-bottom: 17px;
+	margin-bottom:25px;
+	position: relative;
+	&:after {
+		content: '';
+		height: 2px;
+		width: 100px;
+		position: absolute;
+		display: block;
+		bottom: 0;
+		left: 0;
+		background: $base-color;
+	}
+}
 
+// форма
+input[type="text"], textarea {
+	@include box-sizing(border-box);
+	border: 1px solid #e6e6e6;
+	color: $font-color-base;
+	padding: 15px;
+	&:focus {
+		color: $font-color-dark;
+		outline: none;
+	}
+}
+input[type="submit"] {
+	border: none;
+	font-weight: 700;
+}
