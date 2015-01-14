@@ -323,7 +323,7 @@ nav.nav-top .menu {
 				// для IE. Ссылка относительно html файла
 				behavior: url(pie/PIE.htc);
 				@include box-shadow(-0.25em -0.125em 0.125em 0 rgba(0, 0, 0, 0.015));
-				content: '';
+				content: ' ';
 				display: block;
 				height: 13px;
 				position: absolute;
@@ -334,9 +334,9 @@ nav.nav-top .menu {
 			}
 			// заполняет пробел между меню
 			&:after {
-				display: block;
-				position: absolute;
-				content: '';
+				display: block !important;
+				position: absolute !important;
+				content: ' ';
 				width: 100%;
 				height: 20px;
 				top: -20px;
@@ -467,7 +467,7 @@ nav.nav-top .menu {
 	margin-bottom:25px;
 	position: relative;
 	&:after {
-		content: '';
+		content: ' ';
 		height: 2px;
 		width: 100px;
 		position: absolute;
@@ -511,7 +511,7 @@ nav.nav-top .menu {
 		width: 100%;
 	}
 	&:after {
-		content: "";
+		content: " ";
 		display: none;
 		position: absolute;
 		top: 0;
@@ -617,7 +617,7 @@ nav.nav-top .menu {
 		position: relative;
 		// разделитель
 		&:after {
-			content: '';
+			content: ' ';
 			display: block;
 			position: absolute;
 			width: 75px;

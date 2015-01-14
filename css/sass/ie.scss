@@ -3,10 +3,14 @@
  * <!--[if IE]>
  *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
  * <![endif]--> */
+@import "compass/css3";
 
+// удаление уголка меню
  nav.nav-top .menu > .menu-top__item ul:before {
 	display: none !important;
 } 
+
+// фон в топе
 .line_top {
 	background: none;
 }
@@ -15,4 +19,16 @@
 	img {
 		display: block;
 	}
+}
+
+// ссылки в меню больше
+nav.nav-top .menu > .menu-top__item > a {
+	padding-top: 35px;
+	padding-bottom: 35px;
+	overflow: hidden;
+}
+nav.nav-top .menu > .menu-top__item ul:after {
+	background: url('../../img/ie.png');
+	height: 30px;
+	top: -30px;
 }

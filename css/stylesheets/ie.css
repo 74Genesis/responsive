@@ -3,21 +3,35 @@
  * <!--[if IE]>
  *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
  * <![endif]--> */
-/* line 7, ../sass/ie.scss */
+/* line 9, ../sass/ie.scss */
 nav.nav-top .menu > .menu-top__item ul:before {
   display: none !important;
 }
 
-/* line 10, ../sass/ie.scss */
+/* line 14, ../sass/ie.scss */
 .line_top {
   background: none;
 }
 
-/* line 13, ../sass/ie.scss */
+/* line 17, ../sass/ie.scss */
 .ie-back {
   display: block;
 }
-/* line 15, ../sass/ie.scss */
+/* line 19, ../sass/ie.scss */
 .ie-back img {
   display: block;
+}
+
+/* line 25, ../sass/ie.scss */
+nav.nav-top .menu > .menu-top__item > a {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  overflow: hidden;
+}
+
+/* line 30, ../sass/ie.scss */
+nav.nav-top .menu > .menu-top__item ul:after {
+  background: url("../../img/ie.png");
+  height: 30px;
+  top: -30px;
 }

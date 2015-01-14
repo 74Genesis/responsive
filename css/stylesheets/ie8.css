@@ -1,0 +1,5 @@
+/* line 1, ../sass/ie8.scss */
+nav.nav-top .menu > .menu-top__item > a {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}

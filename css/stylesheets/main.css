@@ -550,7 +550,7 @@ nav.nav-top .menu > .menu-top__item ul:before {
   -moz-box-shadow: -0.25em -0.125em 0.125em 0 rgba(0, 0, 0, 0.015);
   -webkit-box-shadow: -0.25em -0.125em 0.125em 0 rgba(0, 0, 0, 0.015);
   box-shadow: -0.25em -0.125em 0.125em 0 rgba(0, 0, 0, 0.015);
-  content: '';
+  content: ' ';
   display: block;
   height: 13px;
   position: absolute;
@@ -561,9 +561,9 @@ nav.nav-top .menu > .menu-top__item ul:before {
 }
 /* line 336, ../sass/main.scss */
 nav.nav-top .menu > .menu-top__item ul:after {
-  display: block;
-  position: absolute;
-  content: '';
+  display: block !important;
+  position: absolute !important;
+  content: ' ';
   width: 100%;
   height: 20px;
   top: -20px;
@@ -700,7 +700,7 @@ nav.nav-top .menu .menu-top__item_dropdown i {
 }
 /* line 469, ../sass/main.scss */
 .about-descr__title:after {
-  content: '';
+  content: ' ';
   height: 2px;
   width: 100px;
   position: absolute;
@@ -754,7 +754,7 @@ nav.nav-top .menu .menu-top__item_dropdown i {
 }
 /* line 513, ../sass/main.scss */
 .port-item__img:after {
-  content: "";
+  content: " ";
   display: none;
   position: absolute;
   top: 0;
@@ -891,7 +891,7 @@ nav.nav-top .menu .menu-top__item_dropdown i {
 }
 /* line 619, ../sass/main.scss */
 .services .services__item .srv-title:after {
-  content: '';
+  content: ' ';
   display: block;
   position: absolute;
   width: 75px;
