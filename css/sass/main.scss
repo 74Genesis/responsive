@@ -563,23 +563,29 @@ nav.nav-top .menu {
 
 // список сервисов
 .services {
-	padding-top: 8px;
+	padding: 8px 0 1px;
 }
 .services .services__item {
 	@include transition-property(background-color, color);
 	@include transition-duration(0.2s, 0.2s);
 	@include transition-timing-function(ease-in-out, ease-in-out);
 	@include transition-delay(initial, initial);
-	width: 20.6837%;
-	margin-right: 2.10826%;
+	width: 23.4364%;
+	margin-right: 2.0848%;
 	&:last-child {margin: 0}
-	padding: 25px 15px 17px;
 	@include inline-block;
 	vertical-align: top;
-	border: 1px solid #e2e2e2;
 	background: #ffffff;
 	text-align: center;
 	color: $font-color-dark;
+	// контейнер
+	.srv-warp {
+		border: 1px solid #e2e2e2;
+		padding: 25px 15px 17px;
+		height: 100%;
+		width: 100%;
+		@include box-sizing(border-box);
+	}
 	// иконка
 	.srv-icon i {
 		color: $base-color;
