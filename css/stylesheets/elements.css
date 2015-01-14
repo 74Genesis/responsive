@@ -1,7 +1,7 @@
 /*
 Error: Undefined mixin 'transition-property'.
-        on line 15 of F:/OpenServer3/domains/other/pf/css/sass/elements.scss, in `transition-property'
-        from line 15 of F:/OpenServer3/domains/other/pf/css/sass/elements.scss
+        on line 15 of F:/OpenServer3/domains/other/pf2/css/sass/elements.scss, in `transition-property'
+        from line 15 of F:/OpenServer3/domains/other/pf2/css/sass/elements.scss
 
 10: }
 11: 
@@ -16,8 +16,8 @@ Error: Undefined mixin 'transition-property'.
 20: 	line-height: 1em;
 
 Backtrace:
-F:/OpenServer3/domains/other/pf/css/sass/elements.scss:15:in `transition-property'
-F:/OpenServer3/domains/other/pf/css/sass/elements.scss:15
+F:/OpenServer3/domains/other/pf2/css/sass/elements.scss:15:in `transition-property'
+F:/OpenServer3/domains/other/pf2/css/sass/elements.scss:15
 F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:338:in `block in visit_mixin'
 F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:98:in `block in with_mixin'
 F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
@@ -73,4 +73,4 @@ F:/Programms/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.9/vendor/listen/lib/listen
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'transition-property'.\A         on line 15 of F:/OpenServer3/domains/other/pf/css/sass/elements.scss, in `transition-property'\A         from line 15 of F:/OpenServer3/domains/other/pf/css/sass/elements.scss\A \A 10: }\A 11: \A 12: \A 13: // ╨▒╨░╨╖╨╛╨▓╤Л╨╡ ╨╜╨░╤Б╤В╤А╨╛╨╣╨║╨╕ ╨║╨╜╨╛╨┐╨║╨╕\A 14: .base-but {\A 15: 	@include transition-property(background-color, color);\A 16: 	@include transition-duration(0.2s, 0.2s);\A 17: 	@include transition-timing-function(ease-in-out, ease-in-out);\A 18: 	@include transition-delay(initial, initial);\A 19: 	@include adjust-font-size-to(20px);\A 20: 	line-height: 1em;"; }
+  content: "Error: Undefined mixin 'transition-property'.\A         on line 15 of F:/OpenServer3/domains/other/pf2/css/sass/elements.scss, in `transition-property'\A         from line 15 of F:/OpenServer3/domains/other/pf2/css/sass/elements.scss\A \A 10: }\A 11: \A 12: \A 13: // ╨▒╨░╨╖╨╛╨▓╤Л╨╡ ╨╜╨░╤Б╤В╤А╨╛╨╣╨║╨╕ ╨║╨╜╨╛╨┐╨║╨╕\A 14: .base-but {\A 15: 	@include transition-property(background-color, color);\A 16: 	@include transition-duration(0.2s, 0.2s);\A 17: 	@include transition-timing-function(ease-in-out, ease-in-out);\A 18: 	@include transition-delay(initial, initial);\A 19: 	@include adjust-font-size-to(20px);\A 20: 	line-height: 1em;"; }
