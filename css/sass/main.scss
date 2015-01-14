@@ -21,6 +21,11 @@ $width-con-2: 1040px;
 $width-con-3: 880px;
 $width-con-4: 90%;
 
+// ширина страницы
+// $width-scr-1: 1280px;
+// $width-scr-2: 1040px;
+// $width-scr-3: 880px;
+// $width-scr-4: 90%;
 
 // фоны
 $back1: #fafafa;
@@ -32,11 +37,6 @@ $back2: #f4f4f4;
 @import "compass/reset";
 
 
-// ширина страницы
-// $width-scr-1: 1280px;
-// $width-scr-2: 1040px;
-// $width-scr-3: 880px;
-// $width-scr-4: 90%;
 
 /* -------- Шрифт -------- */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700);
@@ -100,6 +100,80 @@ b {
 /******  Импорты  ******/
 // отдельные элементы
 @import "elements";
+
+
+/* ****************** мобильное меню ****************** */
+.warp {
+	position: relative;
+}
+
+// меню
+.mobile-menu {
+	position: fixed;
+	left: -250px;
+	top: 0;
+	bottom: 0;
+	width: 250px;
+	height: 100%;
+	background: $base-color2;
+	z-index: 10000;
+	overflow: auto;
+	a {
+		color: #bbb;
+	}
+	.menu {
+		// общие свойства пунктов
+		li a {
+			display: block;
+			position: relative;
+			padding: 15px;
+			border-top: 1px solid #565656;
+		}
+
+		// первый уровень
+		& > li {
+			&:first-child a {border: none;}
+			& > a {color: $font-color-white }
+
+			// второй ур. и дальше
+			ul {
+				padding-left: 20px;
+			}
+		}
+
+	}
+}
+
+// кнопка
+.open-but {
+	display: none !important;
+	z-index: 10000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 90px;
+	height: 60px;
+	cursor: pointer;
+	&:before {
+		background: rgba(192, 192, 192, 0.75);
+		border-radius: 6px;
+		color: #fff;
+		content: "\f0c9";
+		display: block;
+		font-size: 16px;
+		height: 40px;
+		left: 10px;
+		position: absolute;
+		text-align: center;
+		top: 10px;
+		width: 65px;
+		@include adjust-font-size-to(20px);
+		line-height: 2em;
+	}
+}
+
+
+
 
 /* ****************** ШАПКА ****************** */
 header {
@@ -428,6 +502,8 @@ nav.nav-top .menu {
 		width: 100%;
 		height: 100%;
 		opacity: 0.5;
+		/* IE 8 */
+  		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 		z-index: 10;
 	}
 	// кнопка read more
@@ -447,6 +523,7 @@ nav.nav-top .menu {
 
 }
 
+// полоса с информацией
 .port-item__info {
 	border: 1px solid #e8e8e8;
 	border-top: none;
