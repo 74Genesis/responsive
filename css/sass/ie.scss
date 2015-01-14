@@ -3,3 +3,16 @@
  * <!--[if IE]>
  *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
  * <![endif]--> */
+
+ nav.nav-top .menu > .menu-top__item ul:before {
+	display: none !important;
+} 
+.line_top {
+	background: none;
+}
+.ie-back {
+	display: block;
+	img {
+		display: block;
+	}
+}

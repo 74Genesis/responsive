@@ -15,17 +15,21 @@ $font-color-dark: #504f50;
 $font-color-light: #504f50;
 $font-color-white: #fff;
 
-// ширина контента
-$width-con-1: 1170px;
-$width-con-2: 1040px;
-$width-con-3: 880px;
-$width-con-4: 90%;
+// ширина окна
+$width-scr-1: 1200px;
+$width-scr-2: 1024px;
+$width-scr-3: 768px;
+$width-scr-4: 600px;
+$width-scr-5: 480px;
+$width-scr-6: 320px;
 
-// ширина страницы
-// $width-scr-1: 1280px;
-// $width-scr-2: 1040px;
-// $width-scr-3: 880px;
-// $width-scr-4: 90%;
+// ширина контента
+$width-con-1: $width-scr-1 - 30;
+$width-con-2: $width-scr-2 - 30;
+$width-con-3: $width-scr-3 - 30;
+$width-con-4: $width-scr-4 - 30;
+$width-con-5: $width-scr-5 - 30;
+$width-con-6: $width-scr-6 - 30;
 
 // фоны
 $back1: #fafafa;
@@ -117,7 +121,8 @@ b {
 	height: 100%;
 	background: $base-color2;
 	z-index: 10000;
-	overflow: auto;
+	overflow-x: auto;
+	overflow-y: visible;
 	a {
 		color: #bbb;
 	}
@@ -146,7 +151,7 @@ b {
 
 // кнопка
 .open-but {
-	display: none !important;
+	display: none;
 	z-index: 10000;
 	position: fixed;
 	top: 0;
@@ -169,6 +174,9 @@ b {
 		width: 65px;
 		@include adjust-font-size-to(20px);
 		line-height: 2em;
+	}
+	.fa {
+		display: none;
 	}
 }
 
@@ -410,6 +418,20 @@ nav.nav-top .menu {
 	text-align: center;
 	padding: 255px 0 100px 0 !important;
 }
+.ie-back {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	img {
+		position: relative;
+		width: 100%;
+		display: none;
+	}
+}
 
 .header-title {
 	text-transform: uppercase;
@@ -436,6 +458,7 @@ nav.nav-top .menu {
 	img {
 		position: relative;
 		display: block;
+		width: 100%;
 	}
 }
 
@@ -712,18 +735,133 @@ footer {
 
 
 
+/* ******************  ****************** */
 
-
-
-
-@media screen and (max-width: 900px) {
-	.test {
-		background: black;
-		width: 200px;
+@media screen and (max-width: $width-scr-1) {
+	.base_con_width {
+		width: $width-con-2;
 	}
 }
-@media screen and (max-width: 800px) {
-	.test {
-		background: yellow;
+@media screen and (max-width: $width-scr-2) {
+	.base_con_width {
+		width: $width-con-3;
+	}
+	// скрыть вертикальное меню
+	header, .header_scroll {
+		visibility: hidden;
+		opacity: 0;
+	}
+	// отобразить кнопку
+	.open-but {
+		display: block;
+	}
+	.fa {
+		display: inline-block;
+	}
+	// заголовки в сервисах поменьше
+	.services .srv-title h1 {
+		@include adjust-font-size-to(16px);
+	} 
+	
+	// описание проектов
+	.port-item__info .post-item__title {
+		@include adjust-font-size-to(12px);
+		line-height: 5em;
+		width: 60%;
+	}
+	.port-item__info .post-item__cat {
+		width: 39%;
+	}
+}
+@media screen and (max-width: $width-scr-3) {
+	.base_con_width {
+		width: 90%;
+	}
+
+	// заголовок в топе
+	.header-title {
+		@include adjust-font-size-to(28px);
+		width: auto;
+	}
+	.line_top {
+		padding: 145px 0 100px 0 !important;
+	}
+
+	// about
+	.about-img {
+		display: block;
+		position: relative;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.about-descr {
+		width: 100%;
+		float: none;
+	}
+
+	// portfolio
+	.port-items {
+		width: 103%;
+	}
+	.port-item {
+		width: 47%;
+		margin-right: 3%;
+		margin-bottom: 30px;
+	}
+
+	// services
+	.services {
+		padding: 8px 0 1px;
+		width: 103%;
+		overflow: visible;
+	}
+	.services .services__item {
+		width: 47%;
+		margin-right: 3%;
+		margin-bottom: 20px;
+	}
+
+	// contact us 
+	.contact-content, .contact-form {
+		float: none;
+		width: 100%;
+	}
+	.contact-content {
+		margin-bottom: 20px;
+	}
+
+	// авто ширина описания секций
+	.line__descr span {
+		width: auto;
+	}
+
+}
+@media screen and (max-width: $width-scr-4) {
+	// portfolio
+	.port-items {
+		width: 100%;
+	}
+	.port-item {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+
+	// services
+	.services {
+		padding: 8px 0 1px;
+		width: 100%;
+		overflow: visible;
+	}
+	.services .services__item {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+
+	// поля формы
+	.contact-form .name, .contact-form .mail {
+		width: 100%;
+		float: none;
 	}
 }
