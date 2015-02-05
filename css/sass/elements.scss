@@ -94,7 +94,9 @@
 }
 
 // форма
-input[type="text"], input[type="email"], textarea {
+input[type="text"], 
+input[type="email"], 
+textarea {
 	@include box-sizing(border-box);
 	border: 1px solid #e6e6e6;
 	color: $font-color-base;
@@ -107,4 +109,7 @@ input[type="text"], input[type="email"], textarea {
 input[type="submit"] {
 	border: none;
 	font-weight: 700;
+	&:hover {
+		cursor: pointer;
+	}
 }
